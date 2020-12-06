@@ -1,3 +1,6 @@
 {
-  "mongoURI": "mongodb+srv://booklvr:mikaim*88617@mern.vvcng.mongodb.net/MERN?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://booklvr:mikaim*88617@mern.vvcng.mongodb.net/MERN?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "67789bad149eafea8b83",
+  "githubSecret": "1de176832cc5a1b61f6b0c4794b547a16b482d6f"
 }

@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const config = require('config');
-const db = config.get('mongoURI');
+const mongoose = require("mongoose");
+const config = require("config");
+const db = config.get("mongoURI");
 
 const connectDB = async () => {
   try {
@@ -8,10 +8,11 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
+      useFindAndModify: false,
     });
-    console.log('MongoDB Connected...');
+    console.log("MongoDB Connected...");
   } catch (error) {
-    console.log('error:', error.message);
+    console.log("error:", error.message);
     // EXIT PROCESS WITH FAILURE
     process.exit(1);
   }
