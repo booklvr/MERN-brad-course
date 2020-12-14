@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { addPost } from "../../actions/post";
+import { addComment } from "../../actions/post";
 
-export const PostForm = ({ addPost }) => {
+export const CommentForm = ({ postId, addComment }) => {
   const [text, setText] = useState("");
 
   return (
@@ -17,7 +17,7 @@ export const PostForm = ({ addPost }) => {
           e.preventDefault();
           console.log(text);
           console.log("hi hada i like you");
-          addPost({ text });
+          addComment(postId, { text });
           setText("");
         }}
       >
@@ -36,10 +36,8 @@ export const PostForm = ({ addPost }) => {
   );
 };
 
-PostForm.propTypes = {
-  addPost: PropTypes.func.isRequired,
+CommentForm.propTypes = {
+  addComment: PropTypes.func.isRequired,
 };
 
-// const mapStateToProps = (state) => ({});
-
-export default connect(null, { addPost })(PostForm);
+export default connect(null, { addComment })(CommentForm);
